@@ -5,5 +5,7 @@ services:
     image: golang:latest
     volumes:
       - ./src:/go/src
+    # Won't be allocated if using `docker-compose run`.
+    # See https://github.com/docker/compose/issues/1256#issuecomment-90135857
     ports:
-      - "8080:8080"
+      - "8081:8081"
